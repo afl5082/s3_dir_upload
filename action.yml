@@ -1,0 +1,22 @@
+name: Upload S3
+description: 'Upload directory to S3'
+author: 'Adam L'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
+inputs:
+  aws_key_id:
+    description: 'aws key id'
+    required: true
+  aws_secret_access_key:
+    description: 'aws secret access key'
+    required: true
+  aws_bucket:
+    description: 'aws bucket name'
+    required: true
+  source_dir:
+    required: true
+    description: 'directory to upload'
+runs:
+  using: 'python3.8'
+  main: 'main.py'
