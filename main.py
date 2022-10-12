@@ -25,3 +25,5 @@ def main():
     bucket = os.environ.get("BUCKET_NAME")
 
     uploadDirectory(path,bucket)
+    
+main()
