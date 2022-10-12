@@ -7,7 +7,7 @@ def aws_conn():
     aws_access_key_id= os.environ.get("AWS_PUBLIC_KEY"),
     aws_secret_access_key= os.environ.get("AWS_SECRET_KEY"),
 )
-    return session.resource('s3')
+    return session.client('s3') 
 
 
 def uploadDirectory(path,bucketname):
