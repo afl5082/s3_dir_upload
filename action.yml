@@ -37,5 +37,6 @@ runs:
         export AWS_SECRET_KEY=${{inputs.aws_secret_access_key}}
         export BUCKET_NAME=${{inputs.aws_bucket}}
         export SOURCE_DIR=${{inputs.source_dir}}
-        python main.py
+        pwd
+        #python main.py
   
