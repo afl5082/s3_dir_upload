@@ -12,13 +12,13 @@ def aws_conn():
 
 def uploadDirectory(path,bucketname):
 
-    #s3 = aws_conn()
+    s3 = aws_conn()
 
     for root,dirs,files in os.walk(path):
             for file in files:
                 path = os.path.join(root,file)
                 print(path,bucketname,path)
-                #s3.upload_file(os.path.join(root,file),bucketname,file)
+                s3.upload_file(os.path.join(root,file),bucketname,file)
 
 def main():
     path = os.environ.get("SOURCE_DIR")
