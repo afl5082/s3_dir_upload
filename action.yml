@@ -40,6 +40,7 @@ runs:
         pwd
         ls
         echo "${{ github.action_path }}" >> $GITHUB_PATH 
-        ehco $GITHUB_PATH
-        #python main.py
+        pwd
+        ls
+        python main.py
   
