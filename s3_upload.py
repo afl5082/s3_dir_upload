@@ -17,10 +17,10 @@ def uploadDirectory(repo_name,bucketname):
         '__pycache__',
         's3_upload.py',
         '.prefectignore',
-        '.git'
-        's3_upload'
-        '.github'
-        '.gitignore'
+        '.git',
+        's3_upload',
+        '.github',
+        '.gitignore',
         ]
 
     for root,dirs,files in os.walk('.'):
