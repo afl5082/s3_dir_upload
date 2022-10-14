@@ -39,6 +39,10 @@ def uploadDirectory(repo_name,bucketname):
             print(path,bucketname,file_path_to_upload)
             s3.upload_file(path,bucketname,file_path_to_upload)
             
+            if 'deployment.json' in file:
+                deployment_path_upload = 'prefect-server-deployment/deployment.json'
+                s3.upload_file(path,bucketname,deployment_path_upload)
+            
 def main():
     repo_name = os.environ.get("REPO_NAME")
     repo_name = '{}{}'.format('prefect-server-repo/',repo_name)
